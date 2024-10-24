@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #111;
+  margin: 0;
+}
+body .chop-container {
+  position: relative;
+  font-size: 150px;
+  font-weight: bold;
+  font-family: "Arial", sans-serif;
+}
+body .chop-container .chop {
+  display: inline-block;
+  color: #fff;
+  position: relative;
+  text-transform: uppercase;
+  z-index: 10;
+}
+body .chop-container .chop::before {
+  content: "chop!";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  color: #ff00ff;
+  transform: translateY(-15px) rotate(-5deg);
+  z-index: -5;
+  text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff;
+}
+body .chop-container .chop::after {
+  content: "chop!";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  color: #00ffff;
+  transform: translateY(15px) rotate(5deg);
+  z-index: -5;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff;
+}
